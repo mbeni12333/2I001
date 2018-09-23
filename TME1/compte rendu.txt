@@ -1,0 +1,16 @@
+Probleme : 
+	trouver si un chemin exist entre le point de depart dans un labyrinth jusqu'au point d'arrivee
+
+solution:
+	Pour cela j'utilise n algorithme simple recursif, condition de base est que si le point actuelle est le 	point d'arrive en question on est bien et on termine l'execution, sinon si le point actuelle est un point 	sans obstacle, on appelle la meme fonction pour le voisinage de ce point dans l'ordre(droite, bas, gauche, 		haut), mais on est contrarie a un probleme qui est la  boucle infini, pour l'eviter on doit mettre une sorte 	de marque sur les point deja visite (qui sont deux types en passage, un point deja visite qui est  en 		traitement on le note par 2, et un point qui a deja ete traite qu'on le notera par 3), donc chaque visite de 	point sans obstacle ,on change sa valeur a 2 et on fait la suit du traitement.
+	
+	j'ai eu l'idee de faire l'appelle de fonction a l'interieur d'une longue formule logique (des ou logique) au 	lieu d'un appelle pour chaque direction individuellement, vue la nature du compilateur c qui en cas de 	presence de 1 dans une formule compose qu'avec des ou, ignore le reste donc ne fait plus de calcule inutile 	puisque on aura trouve un chemin.
+	
+	pour finir j'ai fait un test case pour visualiser le resultat de l'algorithme avant et apre l'operation de 	recherche du chemin
+
+conclusion:
+	- un tableau 2D doit avoir l'un de ses dimension ecrit implicitement.
+	- les programme recursive sont beaucoup plus petit que les programme itteratif
+Amlioration:
+	- on pourrait chercher a trouve pas n'importe quel chemin mais le plus court.
+	- implementer une visualisation graphique avec des couleurs du programme dans une grid plus general de 		taille MxN, avec interaction souris pour creer des obstacle dynamiquement.
