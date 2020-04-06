@@ -1,0 +1,180 @@
+
+Exercice 1/
+    
+     
+	Q1/ 
+             R2 <- R0 + cst(0010)
+	     
+              
+ 	 
+	Q2/
+	
+		// afficher le contenu de AD
+	     ADOutputXEnable = 1.
+	
+		// afficher le contenu de DT
+	     DTOutputXEnable = 1.
+	
+		// connaitre le contenu de regitsre banc
+	     RgOutputEnable = 1
+	     NumRegToRead pour R0=00
+                               R1=01
+                               R2=10
+                               R3=11
+
+        
+	Q3/
+             
+          
+
+   
+Exercice 2/
+
+	1) l'execution sera sur un seul tranfert 
+
+
+
+	2) pour voir le contenu de AD on le met sur X ou Y par ADOutputXEnable ou ADOutputYEnable = 1
+ 
+  	pour voir le contenu de DT on le met sur X par  DTOutputXEnable = 1
+   
+pour voir le contenu des registre on selection le registe en utilsant NumRegToRead (R1=01,R2=10,R3=11)
+et on le met
+ sur x par RegOutputXEnable = 1
+
+
+
+3.	CST = 0011
+
+	CteOutputYEnable = 1
+	
+	NumRegToRead = 00
+
+	RegOutputXEnble = 1
+
+	NumRegToWrite =11
+
+	RegWriteEnable = 1
+
+	Clock=1, Clock =0
+
+
+
+4.	CST = 0000
+
+	CteOutputYEnable = 1
+
+	NumRegToRead = 10
+
+	RegOutputXEnable =1
+
+	ADWriteEnable = 1
+
+	Clock=1, Clock =0
+
+
+
+5.	ADOutputYEnable = 1
+
+	NumRegToRead = 11
+
+	RegOutputXEnable = 1
+
+	NumRegToWrite = 01
+
+	RegWriteEnable = 1
+
+	Clock=1, Clock =0
+
+
+
+6.	ADoutputEnable = 1
+
+	ADOutputAdressEnable = 1
+
+	NumRegToRead =10
+
+	RegOutputXEnable = 1
+
+	StoreCommand = 1
+
+	Clock=1, Clock =0
+
+
+
+7.	ADoutputAdressEnable = 1
+
+	LoadCommand = 1
+
+	DTWriteEnable = 1
+
+	Clock=1, Clock =0
+
+
+
+8.	pour verifier qu'on a fait une ecriture a reussi on peut lire de la memoire avec la meme adress et on 
+verifie la valeur renvoyé
+
+
+
+Exercice 3/
+
+
+
+	R0 <- R0 +1 : impossible 
+
+	R1 <-R0 : possible
+
+	AD <- R1+R2 : impossible en 1 seul transfert (il faut 2)
+
+	DT <- R1 : impossible sans passer par la memoire
+
+
+
+Exercice 4/
+
+  addi $3, $0, 5 : 
+	r[3] <- r[0]+5
+
+  addi $2, $0, 4 :
+	r[2] <- r[0]+5
+
+  sw $3, 4($2) :
+	AD <- r[2]+4
+
+	m[AD] <- r[3]+0
+
+  lw $1, 8($2) :
+	AD <- r[2]+8
+
+	DT <- m[AD]
+	
+	r[1]<-DT+0
+
+
+Exerciece 5/
+
+	r[3] <- r[0]+5
+
+	r[2] <- r[0]+4
+
+	AD <- r[3] + 0
+
+	r[1]<- AD+r[2]
+
+	AD <- r[2] + 4
+
+	m[AD] <- r[1] +0
+
+	AD <- r[2] + 0
+
+	r[2] <- AD+r[2]
+
+	AD <- r[2]+0
+
+	DT <- m[AD]
+
+	r[3] <-DT+0
+
+
+	R3 =9, DT=9 AD=8 R2=8 R1 =9 R3=5

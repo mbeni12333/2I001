@@ -1,0 +1,113 @@
+=================
+Correction de la question bouger
+Evaluer files Makefile ecosys.h ecosys.c
+Fichier Makefile trouve.
+Fichier ecosys.h trouve.
+Fichier ecosys.c trouve.
+Note 3/3
+Construction cible check_bouger: erreur
+[[[[
+gcc -Wall -I/Infos/lmd/2018/licence/ue/2I001-2018oct//util/include -c ecosys.c
+ecosys.c: In function ‘reproduce’:
+ecosys.c:156:9: warning: implicit declaration of function ‘ajouter_animal_en_tete’ [-Wimplicit-function-declaration]
+         ajouter_animal_en_tete(tmp->x, tmp->y, liste_animal);
+         ^~~~~~~~~~~~~~~~~~~~~~
+ecosys.c: In function ‘rafraichir_proies’:
+ecosys.c:174:13: warning: unused variable ‘copy’ [-Wunused-variable]
+     Animal* copy = NULL;
+             ^~~~
+ecosys.c: In function ‘rafraichir_predateurs’:
+ecosys.c:213:13: warning: unused variable ‘copy’ [-Wunused-variable]
+     Animal* copy = NULL;
+             ^~~~
+gcc -Wall -I/Infos/lmd/2018/licence/ue/2I001-2018oct//util/include -c check_bouger.c
+gcc  -o check_bouger ecosys.o check_bouger.o /Infos/lmd/2018/licence/ue/2I001-2018oct//util/lib/libcheck.a
+ecosys.o : Dans la fonction « reproduce » :
+ecosys.c:(.text+0x490) : référence indéfinie vers « ajouter_animal_en_tete »
+collect2: error: ld returned 1 exit status
+Makefile:26 : la recette pour la cible « check_bouger » a échouée
+make: *** [check_bouger] Erreur 1
+]]]]
+Note 0/1
+Echec check_bouger
+Note 0/5
+=================
+=================
+Correction de la question reproduce
+Construction cible check_reproduce: erreur
+[[[[
+gcc -Wall -I/Infos/lmd/2018/licence/ue/2I001-2018oct//util/include -c check_reproduce.c
+gcc  -o check_reproduce ecosys.o check_reproduce.o /Infos/lmd/2018/licence/ue/2I001-2018oct//util/lib/libcheck.a
+ecosys.o : Dans la fonction « reproduce » :
+ecosys.c:(.text+0x490) : référence indéfinie vers « ajouter_animal_en_tete »
+collect2: error: ld returned 1 exit status
+Makefile:29 : la recette pour la cible « check_reproduce » a échouée
+make: *** [check_reproduce] Erreur 1
+]]]]
+Note 0/1
+Echec check_reproduce
+Note 0/5
+=================
+=================
+Correction de la question proie
+Construction cible check_proie: erreur
+[[[[
+gcc -Wall -I/Infos/lmd/2018/licence/ue/2I001-2018oct//util/include -c check_proie.c
+check_proie.c: In function ‘test_proie’:
+check_proie.c:47:7: warning: unused variable ‘check1’ [-Wunused-variable]
+   int check1[3]={0,0,0};
+       ^~~~~~
+check_proie.c:46:7: warning: unused variable ‘check0’ [-Wunused-variable]
+   int check0[3]={0,0,0};
+       ^~~~~~
+gcc  -o check_proie ecosys.o check_proie.o /Infos/lmd/2018/licence/ue/2I001-2018oct//util/lib/libcheck.a
+ecosys.o : Dans la fonction « reproduce » :
+ecosys.c:(.text+0x490) : référence indéfinie vers « ajouter_animal_en_tete »
+collect2: error: ld returned 1 exit status
+Makefile:32 : la recette pour la cible « check_proie » a échouée
+make: *** [check_proie] Erreur 1
+]]]]
+Note 0/1
+Echec check_proie
+Note 0/5
+=================
+=================
+Correction de la question animalXY
+Construction cible check_animalXY: erreur
+[[[[
+gcc -Wall -I/Infos/lmd/2018/licence/ue/2I001-2018oct//util/include -c check_animalXY.c
+check_animalXY.c: In function ‘test_animalXY’:
+check_animalXY.c:43:7: warning: unused variable ‘i’ [-Wunused-variable]
+   int i;
+       ^
+gcc  -o check_animalXY ecosys.o check_animalXY.o /Infos/lmd/2018/licence/ue/2I001-2018oct//util/lib/libcheck.a
+ecosys.o : Dans la fonction « reproduce » :
+ecosys.c:(.text+0x490) : référence indéfinie vers « ajouter_animal_en_tete »
+collect2: error: ld returned 1 exit status
+Makefile:35 : la recette pour la cible « check_animalXY » a échouée
+make: *** [check_animalXY] Erreur 1
+]]]]
+Note 0/1
+Echec check_animalXY
+Note 0/5
+=================
+=================
+Correction de la question predateur
+Construction cible check_predateur: erreur
+[[[[
+gcc -Wall -I/Infos/lmd/2018/licence/ue/2I001-2018oct//util/include -c check_predateur.c
+gcc  -o check_predateur ecosys.o check_predateur.o /Infos/lmd/2018/licence/ue/2I001-2018oct//util/lib/libcheck.a
+ecosys.o : Dans la fonction « reproduce » :
+ecosys.c:(.text+0x490) : référence indéfinie vers « ajouter_animal_en_tete »
+collect2: error: ld returned 1 exit status
+Makefile:38 : la recette pour la cible « check_predateur » a échouée
+make: *** [check_predateur] Erreur 1
+]]]]
+Note 0/1
+Echec check_predateur
+Note 0/5
+=================
+*********************
+Note finale: 3/33
+Note finale /20: 1.81/20
+*********************

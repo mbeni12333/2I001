@@ -1,0 +1,8 @@
+Running suite(s): Compte mots
+100%: Checks: 5, Failures: 0, Errors: 0
+check_compte_mots_chaine.c:28:P:Compte mots:test_compte_mots_segv:0: Passed
+check_compte_mots_chaine.c:50:P:Compte mots:test_compte_mots:0: Passed
+check_compte_mots_chaine.c:50:P:Compte mots:test_compte_mots:0: Passed
+check_compte_mots_chaine.c:50:P:Compte mots:test_compte_mots:0: Passed
+check_compte_mots_chaine.c:50:P:Compte mots:test_compte_mots:0: Passed
+Note 7/7

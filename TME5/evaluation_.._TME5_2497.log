@@ -1,0 +1,94 @@
+=================
+Correction de la question bouger
+Evaluer files Makefile ecosys.h ecosys.c
+Fichier Makefile trouve.
+Fichier ecosys.h trouve.
+Fichier ecosys.c trouve.
+Note 3/3
+Construction cible check_bouger: erreur
+[[[[
+gcc -Wall -I/Infos/lmd/2018/licence/ue/2I001-2018oct//util/include -c ecosys.c
+ecosys.c: In function ‘rafraichir_predateurs’:
+ecosys.c:229:37: error: expected ‘;’ before ‘)’ token
+         eat = rand()/(float)RAND_MAX);
+                                     ^
+ecosys.c:229:37: error: expected statement before ‘)’ token
+Makefile:13 : la recette pour la cible « ecosys.o » a échouée
+make: *** [ecosys.o] Erreur 1
+]]]]
+Note 0/1
+Echec check_bouger
+Note 0/5
+=================
+=================
+Correction de la question reproduce
+Construction cible check_reproduce: erreur
+[[[[
+gcc -Wall -I/Infos/lmd/2018/licence/ue/2I001-2018oct//util/include -c ecosys.c
+ecosys.c: In function ‘rafraichir_predateurs’:
+ecosys.c:229:37: error: expected ‘;’ before ‘)’ token
+         eat = rand()/(float)RAND_MAX);
+                                     ^
+ecosys.c:229:37: error: expected statement before ‘)’ token
+Makefile:13 : la recette pour la cible « ecosys.o » a échouée
+make: *** [ecosys.o] Erreur 1
+]]]]
+Note 0/1
+Echec check_reproduce
+Note 0/5
+=================
+=================
+Correction de la question proie
+Construction cible check_proie: erreur
+[[[[
+gcc -Wall -I/Infos/lmd/2018/licence/ue/2I001-2018oct//util/include -c ecosys.c
+ecosys.c: In function ‘rafraichir_predateurs’:
+ecosys.c:229:37: error: expected ‘;’ before ‘)’ token
+         eat = rand()/(float)RAND_MAX);
+                                     ^
+ecosys.c:229:37: error: expected statement before ‘)’ token
+Makefile:13 : la recette pour la cible « ecosys.o » a échouée
+make: *** [ecosys.o] Erreur 1
+]]]]
+Note 0/1
+Echec check_proie
+Note 0/5
+=================
+=================
+Correction de la question animalXY
+Construction cible check_animalXY: erreur
+[[[[
+gcc -Wall -I/Infos/lmd/2018/licence/ue/2I001-2018oct//util/include -c ecosys.c
+ecosys.c: In function ‘rafraichir_predateurs’:
+ecosys.c:229:37: error: expected ‘;’ before ‘)’ token
+         eat = rand()/(float)RAND_MAX);
+                                     ^
+ecosys.c:229:37: error: expected statement before ‘)’ token
+Makefile:13 : la recette pour la cible « ecosys.o » a échouée
+make: *** [ecosys.o] Erreur 1
+]]]]
+Note 0/1
+Echec check_animalXY
+Note 0/5
+=================
+=================
+Correction de la question predateur
+Construction cible check_predateur: erreur
+[[[[
+gcc -Wall -I/Infos/lmd/2018/licence/ue/2I001-2018oct//util/include -c ecosys.c
+ecosys.c: In function ‘rafraichir_predateurs’:
+ecosys.c:229:37: error: expected ‘;’ before ‘)’ token
+         eat = rand()/(float)RAND_MAX);
+                                     ^
+ecosys.c:229:37: error: expected statement before ‘)’ token
+Makefile:13 : la recette pour la cible « ecosys.o » a échouée
+make: *** [ecosys.o] Erreur 1
+]]]]
+Note 0/1
+Echec check_predateur
+Note 0/5
+=================
+*********************
+Note finale: 3/33
+Note finale /20: 1.81/20
+*********************

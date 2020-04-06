@@ -1,0 +1,39 @@
+# commentaire sur la redaction d'un canvas
+# le decoupage en Questions est arbitraire et peut etre utilise
+# pour reproduire la structure du TME
+# Pour chaque correction de question, les commandes shell situees
+# entre "@Question actuelle" et "@Question suivante" sont executee
+# Remarque: 
+# deux commandes speciales sont definies dans le script evaluer_TME.sh:
+# -. evaluer_make cible X: lance un make cible et une note binaire X/X 
+#    si le make s'est bien passe et 0/X sinon
+# -. evaluer_exec exec X: fait appel a l'executable exec et renvoie 0/X 
+# si cela n'a pas marche. ATTENTION, l'executable doit par lui-meme 
+# renvoyer la ligne "Note Y/X" avec Y<=X
+@Question 1-2 Exercice 2
+if [ -e csv1.c ]
+then
+    mv csv1.c csvl.c
+fi
+if [ -e csv1.h ]
+then 
+    ln -s csv1.h csvl.h
+fi
+evaluer_file csvl.c
+evaluer_make check_compte_mots 1
+evaluer_exec check_compte_mots 7
+@Question 7
+evaluer_make check_compte_mots_chaine 1
+evaluer_exec check_compte_mots_chaine 7
+@Question 8
+evaluer_make check_decompose_chaine 1
+evaluer_exec check_decompose_chaine 7
+@Question 9
+evaluer_file test_csvl.c
+evaluer_make test_csvl 2
+@Question 10
+evaluer_make check_compose_chaine 1
+evaluer_exec check_compose_chaine 7
+@Question 1 Exercice 3
+evaluer_make check_reduit 1
+evaluer_exec check_reduit 7

@@ -1,0 +1,98 @@
+Exercice 01/
+ Q1/ 
+     Din=0 , WE=0 , Dout=0 , clk1
+     Din=1 , WE=1 , Dout=1 , clk2
+     Din=1 , WE=1 , Dout=1 , clk3
+
+ Q2/
+    //Enregistrer 0100
+    Din=1 , WE=1 , Dout=0000 , clk1
+    Din=0 , WE=1 , Dout=1000 , clk2
+    Din=0 , WE=1 , Dout=0100 , clk3
+
+    //Enregistrer 1111
+    Din=1 , WE=1 , Dout=1000 , clk1
+    Din=1 , WE=1 , Dout=1100 , clk2
+    Din=1 , WE=1 , Dout=1110 , clk3
+    Din=1 , WE=1 , Dout=1111 , clk3
+
+
+Exercice 02/
+	Q1/
+
+	DIN_A	WE_A	EXT_A	DIN_B	WE_B	EXT_B	DIN_C	WE_c	EXT_C	DIN_D	WE_D	EXT_D	RA.Dout	RB.Dout	RC.Dout	RD.Dout	OP_X	OP_Y	ADD/SUB	SF	ZF	Clock(370,390)
+
+
+	1100	1	1	0101	1	1	0011	1	1	0000	0	0	1100	0101	0011	0000	00	00	0	0	0	1
+
+	1100	0	0	0101	0	0	0011	0	0	0000	1	0	1100	0101	0011	0001	00	01	0	0	0	1
+
+	1100	0	0	0101	0	0	0011	0	0	0000	1	0	1100	0101	0011	0100	10	11	0	0	0	1
+
+	Q2/ max 3 nombres 
+	DIN_A	WE_A	EXT_A	DIN_B	WE_B	EXT_B	DIN_C	WE_c	EXT_C	DIN_D	WE_D	EXT_D	RA.Dout	RB.Dout	RC.Dout	RD.Dout	OP_X	OP_Y	ADD/SUB	SF	ZF	Clock(370,390)
+
+		0101	1	1	1111	1	1	0111	1	1	0000	0	0	0000	0000	0000	0000	00	00	0	0	1	0
+
+		0101	1	1	1111	1	1	0111	1	1	0000	0	0	0101	1111	0111	0000	00	00	0	1	0	1
+
+		0101	0	0	1111	0	0	0111	0	0	0000	0	0	0101	1111	0111	0000	00	01	1	0	0	1
+
+		0101	0	0	1111	0	0	0111	0	0	0000	1	0	0101	1111	0111	0110	00	01	1	0	0	1
+
+		0101	1	1	1111	1	1	0111	1	1	0000	0	0	0101	1111	0111	0000	00	00	0	1	0	1
+
+		0101	0	0	1111	0	0	0111	0	0	0000	0	0	0101	1111	0111	0000	00	01	1	0	0	1
+
+		0101	0	0	1111	0	0	0111	0	0	0000	1	0	0101	1111	0111	0101	00	11	0	1	0	1
+
+		0101	1	0	1111	0	0	0111	0	0	0000	0	0	0000	1111	0111	0101	00	00	1	0	1	1
+
+		0101	0	0	1111	0	0	0111	0	0	0000	0	0	0000	1111	0111	0101	10	11	1	0	0	1
+
+		0101	0	0	1111	0	0	0111	0	0	0000	1	0	0000	1111	0111	0111	10	00	0	0	0	1
+	Q3/ pgcd (6,4) = 2
+
+DIN_A	WE_A	EXT_A	DIN_B	WE_B	EXT_B	DIN_C	WE_c	EXT_C	DIN_D	WE_D	EXT_D	RA.Dout	RB.Dout	RC.Dout	RD.Dout	OP_X	OP_Y	ADD/SUB	SF	ZF	Clock(370,390)
+
+
+0110	1	1	0100	1	1	0000	0	0	0000	0	0	0000	0000	0000	0000	00	00	0	0	1	0
+
+0110	1	1	0100	1	1	0000	0	0	0000	0	0	0110	0100	0000	0000	00	00	0	1	0	1
+
+0110	0	0	0100	0	0	0000	1	0	0000	0	0	0110	0100	0010	0000	00	01	1	0	0	1
+
+0110	1	0	0100	0	0	0000	0	0	0000	0	0	0010	0100	0010	0000	10	11	0	0	0	1
+
+0110	0	0	0100	0	0	0000	1	0	0000	0	0	0010	0100	1110	0000	00	01	1	1	0	1
+
+0110	0	0	0100	1	0	0000	0	0	0000	0	0	0010	0010	1110	0000	01	00	1	0	1	1
+
+0110	0	0	0100	0	0	0000	1	0	0000	0	0	0010	0010	0000	0000	00	01	1	0	1	1
+
+0110	1	0	0100	0	0	0000	0	0	0000	0	0	0010	0010	0000	0000	01	11	0	0	0	1
+
+ Exercice 03/
+
+	largeur de la nappe Adresse = 4
+	largeur de la nape Data = 8
+	COMMAND = 2
+
+	les mots apparaissent .à l'interieur de la memoire , chaque 2charactere en hexadecimal represente 		un octet 
+
+	lecture du mot adress 0000 : on met le bus d'adress a 0000, on met le bit de load a 1, et le bit select a 1
+	lecture du mot adress 0001:
+	on met le bus d'adress a 0001, on met le bit de load a 1, et le bit select a 1
+
+	stocker 10 dans l'adress 0001:
+	on met le bus d'adress a 0001, on met le bit store a 1, le bit select a 1, le bus de donne a 0x10
+	stocker 3 dans le mots 5:
+	on met le bus d'adress a 0100, on met le bit store a 1, le bit select a 1, le bus de donne a 0x03
+	lecture du mot l'adress 5:
+	on met le bus d'adress a 0100, on met le bit load a 1, on met le bit select a 1
+
+Q3/
+	
+	
+
+

@@ -1,0 +1,10 @@
+Running suite(s): Compte mots
+14%: Checks: 7, Failures: 6, Errors: 0
+check_compte_mots.c:28:P:Compte mots:test_compte_mots_segv:0: Passed
+check_compte_mots.c:58:F:Compte mots:test_compte_mots:0: erreur sur le comptage de mots
+check_compte_mots.c:58:F:Compte mots:test_compte_mots:0: erreur sur le comptage de mots
+check_compte_mots.c:58:F:Compte mots:test_compte_mots:0: erreur sur le comptage de mots
+check_compte_mots.c:58:F:Compte mots:test_compte_mots:0: erreur sur le comptage de mots
+check_compte_mots.c:58:F:Compte mots:test_compte_mots:0: erreur sur le comptage de mots
+check_compte_mots.c:58:F:Compte mots:test_compte_mots:0: erreur sur le comptage de mots
+Note 1/7
